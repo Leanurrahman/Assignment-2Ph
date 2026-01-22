@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.work-sans-font{
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.navbar{
+display: flex;
+ padding: 0 96px;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.brand{
+    
+  font-weight: 700;
+   width: 219px;
+   height: 32;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Drop Shadow */
+
+     font-size: 32px;
+
+}
+
+.nav-middle {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+ 
+}
+
+.nav-middle a {
+  text-decoration: none;
+  color: #fcfcfc;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500; 
+  font-size: 19px;
+}
+
+.navbar{
+  max-width: 1600px;
+  margin: 0 auto;
+  background-color: #1A0B2E;
+}
+
+.wave {
+   background: linear-gradient(95deg, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+
+ 
+ 
+}
+
+.tech{
+    color: #FFFFFF;
+}
+
+.sub{
+    color: white;
+    margin-right: 30px;
+}
+
+.subscribe{
+  width: 135px;
+  height: 44px;
+  border-radius: 1000px;
+  background: linear-gradient(90deg, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Banner part */
+.banner{
+  max-width: 1600px;
+  min-height: 760px;
+gap: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  gap: 32px;
+
+  background: url("assets/hero-bg.png");
+  background-size: cover;
+  background-position: center;
+}
+
+
+.hero-circle{
+  width: 360px;
+  height: 360px;
+
+  background: url("assets/hero-circle.png") no-repeat center;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  margin-top: 101px;
+}
+
+.mic{
+  width: 140px;
+  height: auto;
+  margin: 0;
+  z-index: 2;
+}
+
+.badge{
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 75px;
+  height: 38px;
+  background: #00FF88;
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  padding:10 16px;
+  border-radius: 40px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+}
+
+.banner-tittle{
+    font-weight: 700;
+    font-size: 60px;
+    color: white;
+    
+     margin: 0;
+}
+
+
+/* .banner-content{
+    max-width: 550px;
+    max-height: 168px;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+
+} */
+
+
+.banner-content .banner-tittle{
+
+   margin-top: 40px;
+}
+
+.banner-description{
+    font-size: 16px;
+    color: white;
+      max-width: 520px;
+
+   
+}
+
+
+.banner-tittle,
+.banner-description {
+  margin: 0;
+}
+
+
+
+.button-pok{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     gap: 8px;
+  padding-bottom: 101px;
+  
+}
+.spotify-btn{
+    max-width: 201px;
+    max-height: 44px;
+    padding: 20px;
+    background: linear-gradient(90deg, #F7E93F 0%, #FB09B4 51%, #9100F8 100%);
+      justify-items: center;
+      text-align: center;
+      align-items: center;
+    display: flex;
+    border-radius: 1000px;
+     gap: 8px;
+     color: white;
+     font-weight: 600;
+     font-size: 15px;
+}
+
+
+.message-btn{
+  width: 180px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 0;              
+  border-radius: 999px;
+
+  background-color: #1A0B2E;
+  border: 2px solid #00FF88; 
+
+  color: #00FF88;
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.spotify-icon{
+     align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+.message-btn img{
+  width: 23px;
+  height: 18px;
+  display: block;  
+}
+
+
+
+@media screen and (max-width: 576px) {
+  .navbar,.brand,.nav-middle{
+    flex-direction: column;
+  }
+  .banner-tittle{
+
+    
+  }
+
+  .navbar .menu{
+    width: 24px;
+    height: 24px;
+   color: #000;
+    
+  }
+  /* .team-image-container, 
+  .facts-container,
+  .sponsor-companies{
+    grid-template-columns: 1fr; 
+  }
+  .facts-container{
+    justify-items: center;
+    gap: 24px;
+  } */
+}
