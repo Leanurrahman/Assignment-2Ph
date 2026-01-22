@@ -845,6 +845,8 @@ gap: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden; 
+  isolation: isolate; 
 
   background: #250D44;  
   border: 1px solid rgba(255,255,255,0.25);
@@ -855,6 +857,9 @@ gap: 0;
   height: 20px;
   border-radius: 0;            
   object-fit: contain;
+    display: block;
+
+   
 }
 
 .thumb{
@@ -867,6 +872,68 @@ gap: 0;
   object-fit: cover;
   display: block;
 }
+
+/* footer */
+
+.footer {
+  text-align: center;
+  max-width: 1600px;
+  height: 412px;
+  background-image: url(assets/footer-bg.png);
+  margin: 0 auto;
+}
+
+/* MAIN FIX HERE */
+.footer-ke {
+  max-width: 1360px;
+  margin: 0 auto;           
+  text-align: center;
+  color: white;
+
+  display: flex;       
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 120px 16px;
+}
+
+.pagol{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+     margin-bottom: 40px;
+}
+
+.pagol p{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+ 
+   
+}
+.kosto{
+      background: linear-gradient( #FB09B4 51%, #9100F8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.footer-ke h2{
+    margin-bottom: 32px;
+}
+
+
+
+
+
+
+
+
+
 
 
 
