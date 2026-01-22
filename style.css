@@ -24,7 +24,7 @@ display: flex;
  padding: 0 96px;
   justify-content: space-between;
   align-items: center;
-  
+   position: relative;
 }
 
 .brand{
@@ -38,20 +38,20 @@ display: flex;
 
 }
 
-.nav-middle {
+.nav-links {
+  list-style: none;
   display: flex;
-  align-items: center;
   gap: 32px;
- 
 }
 
-.nav-middle a {
+.nav-links a {
   text-decoration: none;
   color: #fcfcfc;
   font-family: 'Inter', sans-serif;
-  font-weight: 500; 
+  font-weight: 500;
   font-size: 19px;
 }
+
 
 .navbar{
   max-width: 1600px;
@@ -77,6 +77,23 @@ display: flex;
 .sub{
     color: white;
     margin-right: 30px;
+}
+.nav-actions{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.menu-btn{
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu{
+  width: 24px;
+  height: 24px;
+  display: block;
 }
 
 .subscribe{
@@ -258,6 +275,97 @@ gap: 0;
 
 
 
+/* About section */
+.about-main-section{
+      max-width: 1600;
+    max-height: 646;
+    background-color: #1A0B2E;
+    
+}
+.about-section{
+  max-width: 1200px;
+  margin: 0 auto;              
+  height: 222px;
+
+  display: flex;               
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center;       
+
+  text-align: center;
+  color: #FFFFFF;
+  padding-top: 50px;
+
+}
+
+.about-section h2{
+  margin-bottom: 16px;   /* বা 0 চাইলে */
+}
+
+.about-section p{
+  margin-top: 3px;
+}
+
+
+
+.about-section h2{
+    font-weight: 700;
+    font-size: 46px;
+    color: white;
+    
+}
+.statistics-items{
+   color: white;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 160px;
+  padding-bottom: 120px;
+
+ 
+}
+
+.statistics-items a{
+    color: #00FF88;
+    font-weight: 700;
+    font-size: 48px;
+    width: 240px;
+    height: 58;
+      text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 @media screen and (max-width: 576px) {
   .navbar,.brand,.nav-middle{
     flex-direction: column;
@@ -272,7 +380,7 @@ gap: 0;
     height: 24px;
    color: #000;
     
-  }
+  } */
   /* .team-image-container, 
   .facts-container,
   .sponsor-companies{
@@ -282,4 +390,184 @@ gap: 0;
     justify-items: center;
     gap: 24px;
   } */
+
+
+/* =====================
+   RESPONSIVE BREAKPOINTS
+===================== */
+
+/* Showing navber after clicking the menu ber */
+
+/* =====================
+   DESKTOP DEFAULT
+===================== */
+.menu-btn {
+  display: none;
+}
+
+/* =====================
+   TABLET + MOBILE (≤ 992px)
+===================== */
+@media screen and (max-width: 992px) {
+
+  /* show hamburger */
+  .menu-btn {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  /* hide desktop subscribe */
+  .subscribe {
+    display: none;
+  }
+
+  /* mobile nav menu */
+  .nav-links {
+    position: absolute;
+    top: 72px;
+    right: 20px;
+
+    width: 200px;
+    background: #1A0B2E;
+    border-radius: 16px;
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    border: 1px solid white;
+    cursor: pointer;
+    
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+
+  /* when JS adds .show */
+  .nav-links.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .nav-links li {
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    
+  }
+
+  /* hero scaling */
+  .hero-circle {
+    width: 300px;
+    height: 300px;
+    margin-top: 64px;
+  }
+
+  .mic {
+    width: 120px;
+  }
+
+  .banner-tittle {
+    font-size: 48px;
+  }
+}
+
+/* =====================
+   SMALL DEVICES (≤ 576px)
+===================== */
+@media screen and (max-width: 576px) {
+
+  .navbar {
+    padding: 16px 24px;
+    max-width: 400px;
+    max-height: 386px;
+  }
+
+  .hero-circle {
+    width: 260px;
+    height: 260px;
+    margin-top: 48px;
+  }
+
+  .mic {
+    width: 100px;
+  }
+
+  .banner-tittle {
+    font-size: 40px;
+  }
+
+  .banner-description {
+    font-size: 14px;
+    padding: 0 16px;
+  }
+.continer {
+    max-width: 440px;
+    max-height: 466px;
+
+}
+  .button-pok {
+    width: 356px;
+    height: 44px;
+    gap: 12px;
+    margin-bottom: 60px;
+    
+  }
+
+/* ===== About Section Text Alignment (Responsive) ===== */
+
+.about-section{
+  max-width: 400px;  
+  max-height: 207;
+  margin: 0 auto; 
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+
+.about-section h2{
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.about-section p{
+  max-width: 400px;
+  max-height: 152px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.statistics-items{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    max-width: 400px;
+    max-height: 208;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    
+}
+
+
+.badge{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
 }
